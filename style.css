@@ -466,6 +466,7 @@ header .top_button button:nth-child(2):hover {
     width: 13px;
     height: 13px;
     margin-right: 5px;
+    vertical-align: middle;
     cursor: pointer;
 }
 .counsel_text input[type="checkbox"]:checked + label {
@@ -480,6 +481,7 @@ header .top_button button:nth-child(2):hover {
     margin-left: 5px;
     padding: 1px 3px;
     cursor: pointer;
+    vertical-align: middle;
 }
 .counsel_form {
     width: 720px;
@@ -810,20 +812,25 @@ header .top_button button:nth-child(2):hover {
     display: flex;
     justify-content: space-between;
 }
-.faq_box h2 {
+.faq_box .faq_question {
     font-size: 16px;
     font-family: 'noto_black';
     width: 490px;
     height: 60px;
-    background-image: url('image/box_1.png');
-    background-position: center;
-    background-size: cover;
+    border: 1px solid #8cf0e9;
+    border-radius: 5px;
     color: #8cf0e9;
     margin: 20px 0;
     padding-left: 15px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
+}
+.faq_box .faq_question img {
+    margin-right: 15px;
+    width: 13px;
+    height: 10px;
 }
 .faq_box p {
     font-size: 14px;
@@ -1519,4 +1526,61 @@ footer button {
         margin-top: 40px;
     }
     /* 여기까지 media */
+
+    .faq {
+        height: 765px;
+        padding-top: 30px;
+    }
+    .faq_title {
+        height: 80px;
+        margin-bottom: 30px;
+    }
+    .faq_title img {
+        width: 35px;
+        height: 30px;
+    }
+    .faq_title h1 {
+        font-size: 19px;
+    }
+    .faq_title p {
+        font-size: 8px;
+    }
+    .faq_box {
+        align-items: center;
+        justify-content: flex-start;
+        width: 340px;
+        height: 510px;
+    }
+    .faq_box > div {
+        flex-direction: column;
+    }
+    .faq_box .faq_question {
+        font-size: 12px;
+        width: 330px;
+        height: 40px;
+        margin: 10px 0;
+        padding-left: 10px;
+    }
+    .faq_box .faq_question img {
+        width: 13px;
+        height: 10px;
+    }
+    .faq_box p {
+        font-size: 11px;
+        padding-left: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+        display: none;
+    }
+    .faq_box span {
+        letter-spacing: 1px;
+    }
+    .faq > button {
+        width: 320px;
+        height: 30px;
+        border-radius: 5px;
+        font-size: 10px;
+        margin-top: 50px;
+    }
+    /* 여기까지 faq */
 }
