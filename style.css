@@ -20,6 +20,19 @@
     font-family: "noto_medium";
 }
 
+@keyframes up-ani {
+    0% {
+        transform: translate(0, 100px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.up {
+    animation: up-ani 1s forwards;
+}
+
 * {
     box-sizing: border-box;
     font-family: "noto";
@@ -125,21 +138,12 @@ header .nav_m {
     align-items: center;
     padding-top: 150px;
 }
-@keyframes title-ani {
-    0% {
-        transform: translate(0, 100px);
-    }
-    100% {
-        transform: translate(0px, 0px);
-    }
-}
 .search_title h2 {
     font-size: 45px;
     line-height: 65px;
     color: #162c5e;
     text-align: center;
     font-family: "noto_light";
-    animation: title-ani 2s;
 }
 .search_title h2 span {
     font-weight: bold;
@@ -206,6 +210,7 @@ header .nav_m {
 }
 .promotion_car {
     display: flex;
+    opacity: 0;
 }
 .car_box {
     display: flex;
@@ -293,6 +298,7 @@ header .nav_m {
     margin-top: 30px;
 }
 .banner2_box {
+    opacity: 0;
     display: flex;
     width: 1100px;
     justify-content: space-around;
@@ -348,6 +354,7 @@ header .nav_m {
     padding: 0 120px 20px 120px;
     justify-content: space-between;
     border-bottom: 1px solid gray;
+    opacity: 0;
 }
 .icon_box div h2 {
     font-size: 30px;
@@ -403,6 +410,7 @@ header .nav_m {
     justify-content: space-between;
 }
 .benefit_box {
+    opacity: 0;
     text-align: center;
     width: 320px;
 }
@@ -557,6 +565,9 @@ header .nav_m {
 .system h1 {
     font-size: 40px;
 }
+.system_img {
+    opacity: 0;
+}
 .system_text {
     display: flex;
     margin: auto;
@@ -580,7 +591,7 @@ header .nav_m {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fbfbfb;
+    background-color: #eaf4ff;
     padding-top: 100px;
 }
 .review_title {
@@ -605,10 +616,11 @@ header .nav_m {
     justify-content: space-between;
 }
 .review_box {
+    opacity: 0;
     width: 340px;
     height: 440px;
     border-radius: 20px;
-    box-shadow: -2px 2px 8px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: -2px 2px 8px 7px rgba(0, 0, 0, 0.1);
 }
 .review_text {
     height: 75%;
@@ -905,6 +917,9 @@ header .nav_m {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.banner3_box {
+    opacity: 0;
 }
 .banner3_center > div > div {
     background-image: url('image/image_1.png');

@@ -10,9 +10,58 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>스타일오토</title>
     <script>
-        $(document).ready( function() {
-        $("#title1").fadeIn(2000);
-      } );
+        $(window).ready(function() {
+            $('.search_title').addClass('up');
+            $(window).scroll(function(event) {
+                let current_scroll = document.documentElement.scrollTop;
+                let height1 = $('.promotion').offset().top;
+                let height2 = $('.banner2').offset().top;
+                let height3 = $('.smart').offset().top;
+                let height4 = $('.benefit').offset().top;
+                let height5 = $('.system').offset().top;
+                let height6 = $('.review').offset().top;
+                let height7 = $('.banner3').offset().top;
+                if(current_scroll >= (height1-200) & current_scroll < height1) {
+                    $('.promotion_car').addClass('up');
+                }
+                else if (current_scroll >= (height2 - 200) & current_scroll < height2) {
+                    $('.banner2_box').addClass('up');
+                }
+                else if (current_scroll >= (height3 - 200) & current_scroll < height3) {
+                    $('.icon_box').addClass('up');
+                }
+                else if (current_scroll >= (height4 - 200) & current_scroll < height4) {
+                    $('.benefit_box').addClass('up');
+                }
+                else if (current_scroll >= (height5 - 200) & current_scroll < height5) {
+                    $('.system_img').addClass('up');
+                    $('.system_text').addClass('up');
+                }
+                else if (current_scroll >= (height6 - 200) & current_scroll < height6) {
+                    $('.review_box').addClass('up');
+                }
+                else if (current_scroll >= (height7 - 200)) {
+                    $('.banner3_box').addClass('up');
+                }
+            })
+        })
+        setInterval(function() {
+            if(didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 100);
+        function hasScrolled() {
+            let current_scroll = document.documentElement.scrollTop;
+            let height1 = $('.promotion').prop('scrollHeight');
+            let height2 = $('.banner2').prop('scrollHeight');
+            if(current_scroll >= (height1 - 200)) {
+                $('.promotion_car').addClass('up');
+            }
+            else if (current_scroll >= (height2 - 200)) {
+                $('.banner2_box').addClass('up');
+            }
+        }
     </script>
 </head>
 <body>
@@ -239,7 +288,7 @@
                 <h1>스타일오토 카페어링 시스템 진행절차</h1>
             </div>
             <div>
-                <img src="./image/system_1.jpg" alt="">
+                <img class="system_img" src="./image/system_1.jpg" alt="">
                 <div class="system_text">
                     <h2><span style="color:#8cf0e9;font-family: 'noto_bold';">STEP.01</span><br>상담신청</h2>
                     <h2><span style="color:#8cf0e9;font-family: 'noto_bold';">STEP.02</span><br>상담진행</h2>
@@ -435,27 +484,27 @@
             </div>
             <div class="banner3_center">
                 <div>
-                    <div>
+                    <div class="banner3_box">
                         <h2>#4인가족<br><span>#안성맞춤</span></h2>
-                        <button>문의하기</button>
+                        <button>자세히 보기</button>
                     </div>
                     <img src="./image/im_1.png" alt="">
                     <p>우리 가족을 지켜줄<br>
                         든든한 SUV차량</p>
                 </div>
                 <div>
-                    <div>
+                    <div class="banner3_box">
                         <h2>#사장님들<br><span>#위엄뿜뿜</span></h2>
-                        <button>문의하기</button>
+                        <button>자세히 보기</button>
                     </div>
                     <img src="./image/im_2.png" alt="">
                     <p>사장님들 품위 지켜줄<br>
                         수입 고급차</p>
                 </div>
                 <div>
-                    <div>
+                    <div class="banner3_box">
                         <h2>#입사N년차<br><span>#첫수입차</span></h2>
-                        <button>문의하기</button>
+                        <button>자세히 보기</button>
                     </div>
                     <img src="./image/im_3.png" alt="">
                     <p>출퇴근 피로 달래줄<br>
