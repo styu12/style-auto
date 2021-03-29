@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>스타일오토</title>
+    <script>
+        $(document).ready( function() {
+        $("#title1").fadeIn(2000);
+      } );
+    </script>
 </head>
 <body>
     <header>
@@ -23,6 +29,10 @@
             <button>로그인</button>
             <button>견적문의</button>
         </div>
+        <ul class="nav_m">
+            <img class="logo_m" onclick="location.href='index.html'" src="./image/logo.png"alt="">
+            <img class="menu_m" src="./m_image/menu.png" alt="">
+        </ul>
     </header>
     <main>
         <section class="banner1">
@@ -32,7 +42,7 @@
         <!-- 여기까지 banner1 -->
 
         <section class="search">
-            <div class="search_title">
+            <div id="title1" class="search_title">
                 <h2><span>어떤 차</span>를 찾고 계세요?</h2>
                 <h2><span>어떤 차</span>를 타고 싶으신가요?</h2>
             </div>
@@ -225,7 +235,7 @@
 
         <section class="system">
             <div class="system_title">
-                <img src="./image/logo_2.png" alt="">
+                <img src="./image/logo_white.png" alt="">
                 <h1>스타일오토 카페어링 시스템 진행절차</h1>
             </div>
             <div>
@@ -419,6 +429,7 @@
 
         <section class="banner3">
             <div class="banner3_title">
+                <img src="./image/logo_2.png" alt="">
                 <h1>어떤 차를 타야할까?</h1>
                 <p>상황/테마별로 보는 스타일오토 카페어링 차량 모아보기</p>
             </div>
@@ -457,7 +468,7 @@
         <section class="banner4">
             <div>
                 <h1>스타일오토<br>
-                    중고차 선택의 새로운 기준</h1>
+                    자동차 선택의 새로운 기준</h1>
                 <p>자동차. 과거에는 소유의 개념이 컸다면,<br>
                     이제는 점차 이용의 개념으로 변화되었습니다.<br>
                     이러한 변화 속에서 스타일오토는 더욱 편리하고 저렴하게<br>
@@ -479,7 +490,7 @@
             <button>네이버 밴드</button>
             <button>페이스북</button>
             <div>
-                <img src="./image/logo_2.png" alt="">
+                <img src="./image/logo_white.png" alt="">
                 <h3>STYLE<span style="font-family: 'noto_bold';">AUTO</span></h3>
             </div>
         </div>
@@ -489,6 +500,10 @@
                     주소:서울특별시 서초구 양재대로11길36 금관 304호<br>
                     Copyright styleauto.Ltd.All rights reserved.<br>
                     <span onclick="location.href='#'">이용약관</span> | <span onclick="location.href='#'">개인정보처리방침</span></p>
+                <div class="m_logo">
+                    <img src="./image/logo_white.png" alt="">
+                    <h3>STYLE<span style="font-family: 'noto_bold';">AUTO</span></h3>
+                </div>
             </div>
             <div>
                 <div>
