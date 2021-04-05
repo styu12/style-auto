@@ -4,75 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./common/css/layout.css">
+    <link rel="stylesheet" href="style.css">  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>스타일오토</title>
-    <script>
-        $(window).ready(function() {
-            $('.search_title').addClass('up');
-            $(window).scroll(function(event) {
-                let current_scroll = document.documentElement.scrollTop;
-                let height1 = $('.promotion').offset().top;
-                let height2 = $('.banner2').offset().top;
-                let height3 = $('.smart').offset().top;
-                let height4 = $('.benefit').offset().top;
-                let height5 = $('.system').offset().top;
-                let height6 = $('.review').offset().top;
-                let height7 = $('.banner3').offset().top;
-                if(current_scroll >= (height1-200) & current_scroll < height1) {
-                    $('.promotion_car').addClass('up');
-                }
-                else if (current_scroll >= (height2 - 200) & current_scroll < height2) {
-                    $('.banner2_box').addClass('up');
-                }
-                else if (current_scroll >= (height3 - 200) & current_scroll < height3) {
-                    $('.icon_box').addClass('up');
-                }
-                else if (current_scroll >= (height4 - 200) & current_scroll < height4) {
-                    $('.benefit_box').addClass('up');
-                }
-                else if (current_scroll >= (height5 - 200) & current_scroll < height5) {
-                    $('.system_img').addClass('up');
-                    $('.system_text').addClass('up');
-                }
-                else if (current_scroll >= (height6 - 200) & current_scroll < height6) {
-                    $('.review_box').addClass('up');
-                }
-                else if (current_scroll >= (height7 - 200)) {
-                    $('.banner3_box').addClass('up');
-                }
-            })
-        })
-        setInterval(function() {
-            if(didScroll) {
-                hasScrolled();
-                didScroll = false;
-            }
-        }, 100);
-        function hasScrolled() {
-            let current_scroll = document.documentElement.scrollTop;
-            let height1 = $('.promotion').prop('scrollHeight');
-            let height2 = $('.banner2').prop('scrollHeight');
-            if(current_scroll >= (height1 - 200)) {
-                $('.promotion_car').addClass('up');
-            }
-            else if (current_scroll >= (height2 - 200)) {
-                $('.banner2_box').addClass('up');
-            }
-        }
-    </script>
+   
 </head>
 <body>
     <header>
         <ul class="nav">
             <li><img onclick="location.href='index.html'" src="./image/logo.png" alt=""></li>
-            <li><a href="#">스타일오토</a></li>            
-            <li><a href="#">차량안내</a></li>
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">공식채널</a></li>
-            <li><a href="#">EVENT</a></li>
+            <li><a href="./styleauto/firm.html" class="nav_li" data-value="#sub1">스타일오토</a></li>            
+            <li><a href="./car/sale.html" class="nav_li" data-value="#sub2">차량안내</a></li>
+            <li><a href="./price/new_price.html" class="nav_li" data-value="#sub3">견적문의</a></li>
+            <li><a href="./c_s/notice.html" class="nav_li" data-value="#sub4">고객센터</a></li>
+            <li><a href="./channel/blog.html" class="nav_li" data-value="#sub5">공식채널</a></li>
+            <li><a href="./event/event.html" class="nav_li">EVENT</a></li>
         </ul>
         <div class="top_button">
             <button>로그인</button>
@@ -82,6 +31,37 @@
             <img class="logo_m" onclick="location.href='index.html'" src="./image/logo.png"alt="">
             <img class="menu_m" src="./m_image/menu.png" alt="">
         </ul>
+        <div class="sub_menu">
+            <ul class="sub_li" id="sub1">
+                <li><a href="./styleauto/firm.html">회사소개</a></li>
+                <li><a href="./styleauto/pairing.html">카페어링시스템이란?</a></li>
+                <li><a href="./styleauto/benefit.html">이용헤택</a></li>
+            </ul>
+            <ul class="sub_li" id="sub2">
+                <li><a href="./car/sale.html">특가차량</a></li>
+                <li><a href="./car/new.html">신차</a></li>
+                <li><a href="./car/foreign.html">수입중고차</a></li>
+                <li><a href="./car/domestic.html">국내중고차</a></li>
+            </ul>
+            <ul class="sub_li" id="sub3">
+                <li><a href="./price/new_price.html">신차 견적문의</a></li>
+                <li><a href="./price/old_price.html">중고차 견적문의</a></li>
+            </ul>
+            <ul class="sub_li" id="sub4">
+                <li><a href="./c_s/notice.html">공지사항</a></li>
+                <li><a href="./c_s/car_review.html">차량 출고 후기</a></li>
+                <li><a href="./c_s/customer_review.html">고객 이용 후기</a></li>
+                <li><a href="./c_s/faq.html">자주 묻는 질문</a></li>
+            </ul>
+            <ul class="sub_li" id="sub5">
+                <li><a href="./channel/blog.html">네이버블로그</a></li>
+                <li><a href="./channel/band.html">네이버밴드</a></li>
+                <li><a href="./channel/insta.html">인스타그램</a></li>
+                <li><a href="./channel/facebook.html">페이스북</a></li>
+                <li><a href="./channel/youtube.html">유튜브</a></li>
+                <li><a href="./channel/media.html">언론보도</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <section class="banner1">
@@ -419,7 +399,7 @@
                     </div>
                 </div>
             </div>
-            <button>기사 더보기</button>
+            <button onclick="location.href='./channel/media.html'">기사 더보기</button>
         </section>
         <!-- 여기까지 media -->
 
@@ -531,14 +511,45 @@
     <footer>
         <h2>스타일오토의 공식채널을 만나보세요</h2>
         <div class="sns2">
-            <button>네이버 블로그</button>
-            <button>인스타그램</button>
-            <button>유튜브</button>
+            <div class="sns_box">
+                <div>
+                    <img class="sns_icon" src="./image/blog.png" alt="">
+                    <p>  네이버 블로그  </p>
+                </div>    
+                <img class="arrow" src="./image/bottom_arrow.png" alt="">
+            </div>
+            <div class="sns_box">
+                <div>
+                    <img src="./image/instagram.png" alt="" class="sns_icon">
+                    <p>  인스타그램</p>
+                </div>
+                <img src="./image/bottom_arrow.png" alt="" class="arrow">
+            </div>
+            <div class="sns_box">
+                <div>
+                    <img src="./image/youtube.png" alt="" class="sns_icon">
+                    <p>  유튜브</p>
+                </div>     
+                <img src="./image/bottom_arrow.png" alt="" class="arrow">
+            </div>
+            
         </div>
         <div class="sns1">
-            <button>네이버 밴드</button>
-            <button>페이스북</button>
-            <div>
+            <div class="sns_box">
+                <div>
+                    <img src="./image/band.png" alt="" class="sns_icon">
+                    <p>  네이버 밴드</p>
+                </div> 
+                <img src="./image/bottom_arrow.png" alt="" class="arrow">
+            </div>
+            <div class="sns_box">
+                <div>
+                    <img src="./image/facebook.png" alt="" class="sns_icon">  
+                    <p>페이스북</p>
+                </div>    
+                <img src="./image/bottom_arrow.png" alt="" class="arrow">
+            </div>
+            <div class="footer_logo">
                 <img src="./image/logo_white.png" alt="">
                 <h3>STYLE<span style="font-family: 'noto_bold';">AUTO</span></h3>
             </div>
@@ -564,18 +575,6 @@
         </div>
     </footer>
     <script>
-        function faq_toggle1() {
-            $('#faq1').toggle();
-        }
-        function faq_toggle2() {
-            $('#faq2').toggle();
-        }
-        function faq_toggle3() {
-            $('#faq3').toggle();
-        }
-        function faq_toggle4() {
-            $('#faq4').toggle();
-        }
         // 2. This code loads the IFrame Player API code asynchronously.
         var tag = document.createElement('script');
     
@@ -641,5 +640,7 @@
         }
       </script>
       <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <script src="./common/js/animation.js"></script>
+      <script src="./common/js/menu.js"></script>
 </body>
 </html>
